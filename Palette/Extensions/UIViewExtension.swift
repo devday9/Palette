@@ -1,9 +1,9 @@
 //
 //  UIViewExtension.swift
-//  InstagramProgramatically
+//  Palette
 //
-//  Created by Trevor Adcock on 6/19/18.
-//  Copyright © 2018 Jayden Garrick. All rights reserved.
+//  Created by Cameron Stuart on 7/10/20.
+//  Copyright © 2020 Cameron Stuart. All rights reserved.
 //
 
 import UIKit
