@@ -15,12 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        if let scene = (scene as? UIWindowScene) { // we need to declare "scene" to make a window
-            let window = UIWindow(windowScene: scene) // make the window
-            window.rootViewController = PaletteListViewController()
-            self.window = window
-            window.makeKeyAndVisible()
-        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
