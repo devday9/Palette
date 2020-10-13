@@ -15,7 +15,7 @@ class ImaggaService {
     private init() {}
     
     static let baseURLPath = "http://api.imagga.com/v2"
-    static let authenticationToken = "Basic xxxx"
+    static let authenticationToken = "Basic YWNjXzUyNmJkZDM5NjM0ODlhNDowN2YxZjM1YjY0YTk4NWEyNDU0NTJhZjc3MjllYWM2NA=="
     
     func fetchColorsFor(imagePath: String, attempts: Int =  0, completion: @escaping ([UIColor]?) -> Void){
         guard let url = URL(string: ImaggaService.baseURLPath)?.appendingPathComponent("colors") else { completion(nil) ; return }
@@ -46,4 +46,4 @@ class ImaggaService {
             }
             }.resume()
     }
-}
+}//END OF CLASS

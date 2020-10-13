@@ -49,6 +49,6 @@ class UnsplashService {
             }
             guard let data = data else {completion(nil) ; return}
             completion(UIImage(data: data))
-            }.resume()
+        }.resume()
     }
 }
