@@ -24,7 +24,6 @@ class PaletteListViewController: UIViewController {
         super.loadView()
         addAllSubViews()
         setUpStackView()
-        paletteTableView.anchor(top: buttonStackView.bottomAnchor, bottom: safeArea.bottomAnchor, leading: safeArea.leadingAnchor, trailing: safeArea.trailingAnchor, paddingTop: 8, paddingBottom: 0, paddingLeft: 0, paddingRight: 0)
     }
     
     override func viewDidLoad() {
@@ -54,6 +53,10 @@ class PaletteListViewController: UIViewController {
         
         //Same as above:
 //        buttonStackView.anchor(top: safeArea.topAnchor, bottom: nil, leading: safeArea.leadingAnchor, trailing: safeArea.trailingAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: SpacingConstants.outerHorizontalPadding, paddingRight: SpacingConstants.outerHorizontalPadding)
+    }
+    
+    func constrainTableView() {
+        paletteTableView.anchor(top: buttonStackView.bottomAnchor, bottom: safeArea.bottomAnchor, leading: safeArea.leadingAnchor, trailing: safeArea.trailingAnchor, paddingTop: 8, paddingBottom: 0, paddingLeft: 0, paddingRight: 0)
     }
     
     func configureTableView() {
