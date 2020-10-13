@@ -10,7 +10,7 @@ import UIKit
 
 class ColorPaletteView: UIView {
     
-    var colors: [UIColor]{
+    var colors: [UIColor]? {
         didSet{
             buildColorBricks()
         }
@@ -19,15 +19,6 @@ class ColorPaletteView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         setUpViews()
-    }
-    
-    init(colors: [UIColor] = [], frame: CGRect = .zero) {
-        self.colors = colors
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func setUpViews() {
@@ -44,7 +35,8 @@ class ColorPaletteView: UIView {
     
     private func buildColorBricks(){
         resetColorBricks()
-        for color in self.colors {
+        guard let colors = self.colors else { return }
+        for color in colors {
             let colorBrick = self.generateColorBrick(for: color)
             self.addSubview(colorBrick)
             self.colorStackView.addArrangedSubview(colorBrick)

@@ -24,6 +24,7 @@ class PaletteListViewController: UIViewController {
         super.loadView()
         addAllSubViews()
         setUpStackView()
+        constrainTableView()
     }
     
     override func viewDidLoad() {
